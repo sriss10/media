@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-image">
+        {% if post.image %}
+        <img src="/media/{{ post.image }}" style="width:50%">
+        {% endif %}
+
+    </div>
+    <div class="card-content">
+        <span class="card-title">{{ post.user.first_name }}{{ post.user.last_name }}</span>
+        <span>{{ post.created_at }}</span>
+        <p>
+            {{ post.content }}
+        </p>
+    </div>
+    <div class="card-action">
+        <a href="#" id="like-click">{{ post.like_set.count }} LIKES</a>
+        <a class="modal-trigger " href="#postModal{{post.id}}">{{ post.comment_set.count }} COMMENTS</a>
+    </div>
+    <!--wht is relationship b/w a tag and a class and then what is a relationship b/w a tag and an id
+    ans: tag:class is an n:m relationship i.e one tag can have multiple classes and one class can be applied on multiple tags
+whereas tag and id is an 1:1 relationship i.e. one tag can have only one id and vice versa-->
+</div>
+</div>
+
+
+<div id="postModal{{post.id}}" class="modal">
+    <div class="modal-content">
+        <h4>Comments</h4>
+        <ul>
+            {% for comment in post.comment_set.all %}
+            <li>{{ comment.user.first_name }} - {{comment.content}} </li>
+            {% endfor %}
+        </ul>
+        <form action="" onsubmit="commentPost({{post.id}}, document.getElementById('comment{{post.id}}').value);">
+            <div class="input-field ">
+                <input  id="comment{{post.id}}" type="text" class="validate">
+                <label for="comment{{post.id}}">COmment</label>
+              </div>
+              <button type="submit" class="btn waves-effects">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <!--we created a model of like and comment so each like is a entity
+and each comment is a entity so if we want reverse relation of like from post
+we can find that bt post.like_set so wht django does is for reverse relation by default it puts models_set in reverse relation
+  if we want to overwrite it we can add reated name='likes' and now everywhere we can use that name now
+  so like_set is the reverse relationship name given by django but we can overwrite it using related_name keyworded argument
+-->
+
+
+
+    <!--components are partial templates i.e. if we have to use 
+same template on home and wall so we'll ceate component of it -->
+    <!--we'll expect that we'll be getting a variable of class POST from models-->
