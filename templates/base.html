@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<title>HOME PAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<body id="main">
+    <!--navbar-->
+    <header>
+        <nav id="header-nav" class="navbar navbar-default navbar-dark bg-primary">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="homepage.html">
+                            <h1>F.R.I.E.N.D.S<br></h1>
+                        </a>
+                        <h3>The one stop destination for socialising</h3>
+                    </div>
+                    <div id="mySidebar" class="sidebar">
+
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/wall">Wall</a></li>
+
+                        <li><a href="/auth/logout">Sign Out</a></li>
+
+                    </div>
+                    <div class="visible-xs">
+                        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+                    </div>
+                    <!-- {% if user.is_authenticated %} -->
+
+                    <div class="hidden-xs">
+                        <!-- <li><a href="/home">Hello, {{  user.first_name }} {{ user.last_name }}</a></li> -->
+                        <button type="button" class="btn pos1 login btn-info">Sign Out</button>
+                    </div>
+
+                    <div class="hidden-xs">
+                        <ul id="nav-list" class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="/home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/home">Wall</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- {% else %} -->
+                    <div class="hidden-xs">
+                        <!-- <li><a href="/home">Hello, {{  user.first_name }} {{ user.last_name }}</a></li> -->
+                        <button type="button" class="btn pos1 login btn-info">Login</button>
+                    </div>
+                    <!-- {% endif %} -->
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}  {% endblock %}
+    
+    <footer class="foot">
+        <h4>Footer content</h4>
+        <button type="button" class="btn butn2 hover-skyblue btn-link"><a href="#"> facebook page</a></button>
+        <button type="button" class="btn butn2 hover-skyblue btn-link"><a href="#"> insta page</a></button>
+    </footer>
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/social.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, {});
+        });
+    </script>
+</body>
+
+</html>

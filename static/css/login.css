@@ -1,0 +1,125 @@
+body
+{
+  background-image:url(https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-shading-background-abstract-colorful-background-colorful-art-image_22644.jpg); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
+}
+
+#header-nav
+{
+	background-color: #8a00e6;
+	height:120px;
+}
+.navbar
+{
+	color: white;
+	font-family:"lato",sans-serif;
+	text-align:left ;
+	
+}
+h1
+{
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+h3
+{
+	font-size: 20px;
+	color:white;
+}
+h5
+{
+	font-weight: bold;
+}
+.signin
+{
+	font-weight: bold;
+	font-size: 40px;
+	color: black;
+}
+.mains
+{
+	background: rgba(255,255,255,0.4);
+}
+.button  {
+  border-radius: 4px;
+  background-color: #7a00cc;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+ 
+}
+.button a {
+  color:white;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button2 {
+  border-radius: 4px;
+  background-color: #7a00cc;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  
+}
+.button2 a
+{
+  color:white;
+}
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}

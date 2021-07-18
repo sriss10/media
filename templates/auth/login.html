@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<title>LOGIN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+<body id="main">
+    <header>
+        <nav id="header-nav" class="navbar navbar-default navbar-dark bg-primary">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="#">
+                            <h1>F.R.I.E.N.D.S<br></h1>
+                        </a>
+                        <h3>The one stop destination for socialising</h3>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-3 col-sm-3"></div>
+        <div align="center" class="mains col-md-6 col-sm-6">
+            <form method="POST">
+                {% csrf_token %}
+                <h4 class="signin">Login</h4>
+                <h4 align="left" class="storehead">Username</h4>
+                <input type="text" name="username" class="form-control form-control-sm" placeholder="Enter Username"
+                    id="username">
+                <h4 align="left" class="storehead">Password</h4>
+                <input type="password" name="password" class="form-control form-control-sm" placeholder="Enter Password"
+                    id="pwd">
+                <button class="button " type="submit"><span><a href="/">Login</a></span></button>
+                <h5>New user?</h5>
+                <button class="button2 " type="button"><span><a href="/auth/signup">Sign Up </a></span></button>
+            </form>
+        </div>
+        <div class="col-md-3 col-sm-3"></div>
+    </header>
+
+</body>
+
+</html>
