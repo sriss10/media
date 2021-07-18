@@ -1,0 +1,151 @@
+body,h1,h2,h3,h4,h5,h6
+{font-family:"lato",sans-serif}
+body
+{
+  background-image:url(https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-shading-background-abstract-colorful-background-colorful-art-image_22644.jpg); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  overflow-x: hidden; 
+}
+#header-nav
+{
+	background-color:#dd90f5;/* #a50fd4;*/
+}
+#nav-list {
+	margin-top: 60px;
+	position: relative;
+	left: 50px;
+}
+#nav-list a
+{
+	color: white;
+	border: 1px white; 
+	box-shadow: 1px white;
+}
+#nav-list .active a
+{
+	color: white;
+	border: 1px white; 
+	box-shadow: 1px white;
+	background-color: #ba57d9;
+}
+#nav-list a:hover
+{
+	background-color:#f5dcfc;/*#d896ff;*/
+	color: black;
+}
+@media(max-width: 768px)
+{
+    #header-nav
+    {
+    	height: 140px;
+    }
+    .navbar-brand
+    {
+    	position: absolute;
+    	left: 120px;
+    }
+    .foot
+    {
+     
+      bottom: 0px;
+    }
+}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+.foot
+{
+	background-color: #dd90f5;/*#8a00e6;*/
+	width: 100%;
+	padding-top: 20px;
+  	padding-bottom: 20px;
+	color:white;
+	text-align: center;
+	
+    bottom: 0px;
+}
+.foot a{
+	color: black;
+}
+h1
+{
+	font-size:30px;
+	color:white
+}
+.pos1
+{
+	position: absolute;
+	top: 40%; 
+	right:20px;
+}
+.login
+{
+	background-color: #ba57d9;
+	font-size: 16px;
+	text-decoration: bold;
+	border-color: white;
+}
+.login:hover
+{
+	background-color:#000000;
+	color: #ffffff;
+}
+h3
+{
+	margin-top: -5px;
+	color:black;
+}
+
+.right{
+	text-align: right;
+}
+.textcard{
+	text-decoration: bold;
+}
+#hd{
+	font-weight: 700;
+	color: #6e068f;
+}
+.btncard{
+	background-color: #0275d8;
+}

@@ -5,6 +5,11 @@ from django.contrib.auth.forms import UserCreationForm
 from auth import forms
 from django.contrib.auth import login
 
+
+
+
+
+
 # Create your views here.
 class Login(LoginView):
     template_name='auth/login.html'
